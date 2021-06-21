@@ -1,3 +1,5 @@
+[![CI](https://github.com/DTUWindEnergy/ASPECT-taxonomy/workflows/Sheet2RDF/badge.svg)](https://github.com/DTUWindEnergy/ASPECT-taxonomy/actions?query=workflow%3ASheet2RDF)
+
 # ASPECT: wind energy v**A**riable**S** **P**aramet**E**rs and **C**ons**T**ants
 This repository is meant for maintaining and updating the taxonomy (i.e. controlled vocabulary) of v**A**riable**S** **P**aramet**E**rs **C**ons**T**ants (ASPECT) used in wind energy community. In general, controlled vocabularies such this one allow an accurate and controlled approach in describing assets such datasets.
 
