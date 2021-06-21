@@ -1,0 +1,1510 @@
+@prefix aspect: <http://data.windenergy.dtu.dk/controlled-terminology/aspect/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.windenergy.dtu.dk/controlled-terminology/aspect/> a skos:ConceptScheme;
+  dct:creator "Technical University of Denmark, DTU Wind Energy"@en;
+  dct:description "Controlled vocabulary of variables, parameters and constants used in wind energy community."@en;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "ASPECT: wind energy vAriableS ParametErs and ConsTants"@en;
+  pav:createdOn "2020-10-22T22:00:00+01:00"@en;
+  pav:lastUpdatedOn "2021-06-21T15:00:00+01:00"@en;
+  pav:version "0.1"@en;
+  skos:hasTopConcept aspect:AtmosphericTerms, aspect:GenericTerms, aspect:WindPowerPlantTerms;
+  skos:prefLabel "ASPECT"@en .
+
+aspect:longName a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "long name"@en;
+  skos:definition "Long name of parameter typically used for viewing purposes in applications, e.g. for plot axes labels."@en;
+  skos:prefLabel "longName"@en .
+
+aspect:abbrevation a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "abbrevation"@en;
+  skos:definition "A shortened form of a parameter label used as a short name of parameter in different applications."@en;
+  skos:prefLabel "abbrevation"@en .
+
+aspect:dnvgl-st-0437-name a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "dnvgl-st-0437-name"@en;
+  skos:definition "DNVGL-ST-0437 standardized name of a parameter"@en;
+  skos:exactMatch <https://rules.dnvgl.com/docs/pdf/DNVGL/ST/2016-11/DNVGL-ST-0437.pdf>;
+  skos:prefLabel "dnvgl-st-0437-name"@en .
+
+aspect:dnvgl-st-0376-name a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "dnvgl-st-0376-name"@en;
+  skos:definition "DNVGL-ST-0376 standardized name of a parameter"@en;
+  skos:exactMatch <https://rules.dnvgl.com/docs/pdf/DNVGL/ST/2015-12/DNVGL-ST-0376.pdf>;
+  skos:prefLabel "dnvgl-st-0376-name"@en .
+
+aspect:iec-61400-23-name a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "iec-61400-23-name"@en;
+  skos:definition "IEC 61400-23 standardized name of a parameter"@en;
+  skos:exactMatch <https://webstore.iec.ch/publication/5436>;
+  skos:prefLabel "iec-61400-23-name"@en .
+
+aspect:iec-61400-13-name a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "iec-61400-13-name"@en;
+  skos:definition "IEC 61400-13 standardized name of a parameter"@en;
+  skos:exactMatch <https://webstore.iec.ch/publication/23971>;
+  skos:prefLabel "iec-61400-13-name"@en .
+
+aspect:iec-61400-25-2-name a rdf:Property;
+  rdfs:label "iec-61400-25-2-name"@en;
+  skos:definition "IEC 61400-25-2 standardized name of a parameter"@en;
+  skos:prefLabel "iec-61400-25-2-name"@en .
+
+aspect:prefUnit a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "prefered unit"@en;
+  skos:definition "A prefered unit for a given parameter"@en;
+  skos:prefLabel "prefUnit"@en .
+
+aspect:altUnit a rdf:Property;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  rdfs:label "alternative unit"@en;
+  skos:definition "An alternative unit for a given parameter"@en;
+  skos:prefLabel "altUnit"@en .
+
+aspect:GenericTerms a skos:Concept;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:definition "This is a category of generic variables, parameters, and constants not associated with any other category of parameters."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:azimuth_angle, aspect:elevation_angle;
+  skos:prefLabel "Generic Terms"@en;
+  skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminology/aspect/> .
+
+aspect:azimuth_angle a skos:Concept;
+  aspect:abbrevation "Theta"@en;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Azimuth Angle"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:GenericTerms;
+  skos:definition "The azimuth is the angle formed between a reference direction (in this example north) and a line from the observer to a point of interest projected on the same plane as the reference direction orthogonal to the zenith."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/sensor_azimuth_angle>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "azimuth_angle"@en .
+
+aspect:elevation_angle a skos:Concept;
+  aspect:abbrevation "Phi"@en;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Elevation Angle"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:GenericTerms;
+  skos:definition "Elevation angle is the angle between the horizontal plane and the line of sight, measured in the vertical plane. The reference direction (i.e. an elevation angle of zero degrees) is a horizontal line in the direction to the horizon."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "elevation_angle"@en .
+
+aspect:AtmosphericTerms a skos:Concept;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:definition "This is a category of variables, parameters, and constants associated with atmopshere."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:air_pressure, aspect:air_temperature, aspect:crosswind, aspect:equivalent_reflectivity_factor,
+    aspect:flow_inclination_angle, aspect:headwind, aspect:number_of_particles_classified,
+    aspect:particle_diameter, aspect:particle_fall_speed, aspect:radial_velocity_of_scatterers_toward_instrument,
+    aspect:rain_status, aspect:rainfall_amount, aspect:rainfall_kinetic_energy, aspect:rainfall_rate,
+    aspect:relative_humidity, aspect:tailwind, aspect:wind_direction, aspect:wind_speed;
+  skos:prefLabel "Atmospheric Terms"@en;
+  skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminology/aspect/> .
+
+aspect:wind_speed a skos:Concept;
+  aspect:abbrevation "WS"@en;
+  aspect:long-name "Wind Speed"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:altLabel "Vh"@en, "horizontal_wind_speed"@en;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_speed>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "wind_speed"@en .
+
+aspect:wind_direction a skos:Concept;
+  aspect:abbrevation "WD"@en;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Wind Direction"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:altLabel "wind_from_direction"@en;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) In meteorological reports, the direction of the wind vector is usually (but not always) given as the direction from which it is blowing (wind_from_direction) (westerly, northerly, etc.). In other contexts, such as atmospheric modelling, it is often natural to give the direction in the usual manner of vectors as the heading or the direction to which it is blowing (wind_to_direction) (eastward, southward, etc.) \"from_direction\" is used in the construction X_from_direction and indicates the direction from which the velocity vector of X is coming."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_from_direction>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "wind_direction"@en .
+
+aspect:crosswind a skos:Concept;
+  aspect:long-name "Crosswind"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "A crosswind is any wind that has a perpendicular component to the line or direction of travel. In case of a wind turbine it is represents a component of the wind perpendicular to the rotor saspectt area."@en;
+  skos:exactMatch <https://en.wikipedia.org/wiki/Crosswind>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "crosswind"@en .
+
+aspect:headwind a skos:Concept;
+  aspect:long-name "Headwind"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "A headwind is any wind that blows against the direction of travel. In case of a wind turbine it is represents a component of the wind which directly blows against the rotor saspectt area."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "headwind"@en .
+
+aspect:tailwind a skos:Concept;
+  aspect:long-name "Tailwind"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "A tailwind is any wind that blows in the direction of travel."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "tailwind"@en .
+
+aspect:radial_velocity_of_scatterers_toward_instrument a skos:Concept;
+  aspect:abbrevation "Vrad"@en;
+  aspect:long-name "Radial Velocity"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:altLabel "radial_velocity"@en;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "A velocity is a vector quantity. \"Radial velocity toward instrument\" means the component of the velocity along the line of sight of the instrument where positive implies movement toward the instrument (i.e. inward). The \"instrument\" (examples are radar and lidar) is the device used to make the observation. The \"scatterers\" are what causes the transmitted signal to be returned to the instrument (examples are aerosols, hydrometeors and refractive index irregularities), of whatever kind the instrument detects. A standard name referring to radial velocity \"away_from_instrument\" should be used for a data variable having the opposite sign convention."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/radial_velocity_of_scatterers_toward_instrument>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "radial_velocity_of_scatterers_toward_instrument"@en .
+
+aspect:air_temperature a skos:Concept;
+  aspect:abbrevation "Tair"@en;
+  aspect:altfUnit "K"@en;
+  aspect:long-name "Air Temperature"@en;
+  aspect:prefUnit "C"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Air temperature is the bulk temperature of the air, not the surface (skin) temperature."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/air_temperature>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "air_temperature"@en .
+
+aspect:air_pressure a skos:Concept;
+  aspect:long-name "Air Pressure"@en;
+  aspect:prefUnit "Pa"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/air_pressure>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "air_pressure"@en .
+
+aspect:relative_humidity a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:dnvgl-st-0376-name "RH"@en;
+  aspect:long-name "Relative Humidity"@en;
+  aspect:prefUnit "air g kg-1"@en, "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>, <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms, aspect:WindTurbineBladeTerms;
+  skos:definition "Relative humidity"@en, "Relative humidity is a parameter used to describe the amount of water vapor that exists in a gaseous mixture of air and water."@en;
+  skos:exactMatch <https://mmisw.org/ont/cf/parameter/relative_humidity>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "relative_humidity"@en .
+
+aspect:flow_inclination_angle a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Flow Inclination Angle"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Flow inclination describes the angle between the horizontal plane and the direction of wind hitting the turbine. Coming from below, e.g. up-hill it is considered to be a positive, from down-hill to be negative angle."@en;
+  skos:exactMatch <https://www.romowind.com/en/flow-inclination>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "flow_inclination_angle"@en .
+
+aspect:rain_status a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Rain Status"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "This parameter indicates if rain is falling (has value 1 or True) or not (has value 0 or False)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rain_status"@en .
+
+aspect:rainfall_amount a skos:Concept;
+  aspect:long-name "Rainfall Amount"@en;
+  aspect:prefUnit "mm"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Amount' means mass per unit area"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rainfall_amount"@en .
+
+aspect:rainfall_rate a skos:Concept;
+  aspect:long-name "Rainfall Rate"@en;
+  aspect:prefUnit "mm h-1"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Amount of rain that would fall over a given interval of time if the rainfall rate were constant over that time period"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rainfall_rate"@en .
+
+aspect:equivalent_reflectivity_factor a skos:Concept;
+  aspect:long-name "Radar Reflectivity"@en;
+  aspect:prefUnit "dBz"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Radar reflectivity factor Z is equal to the sum of the sixth- powers of the diameters of the water drops in a unit volume of space"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "radar_reflectivity"@en .
+
+aspect:rainfall_kinetic_energy a skos:Concept;
+  aspect:long-name "Rainfall Kinetic Energy"@en;
+  aspect:prefUnit "J m-2 h-1"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Energy provided by rain per area and time interval"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rainfall_kinetic_energy"@en .
+
+aspect:particle_fall_speed a skos:Concept;
+  aspect:long-name "Particle Fall Speed"@en;
+  aspect:prefUnit "m s-1"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Mid-values of fall speed classes for classifying a precipitation particle's fall speed measured by a disdrometer"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "particle_fall_speed"@en .
+
+aspect:particle_diameter a skos:Concept;
+  aspect:long-name "Particle Diameter"@en;
+  aspect:prefUnit "mm"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Mid-values of diameter classes for classifying a precipitation particle's diameter measured by a disdrometer"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "particle_diameter"@en .
+
+aspect:number_of_particles_classified a skos:Concept;
+  aspect:long-name "Number of particles classified by fall speed, diameter and time"@en;
+  dct:creator <https://orcid.org/0000-0003-1702-8002>;
+  skos:broader aspect:AtmosphericTerms;
+  skos:definition "Number of particles measured by a disdrometer and classified by fall speed, diameter and time"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "number_of_particles_classified"@en .
+
+aspect:WindPowerPlantTerms a skos:Concept;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind power plants."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:WindTurbineTerms;
+  skos:prefLabel "Wind Power Plant Terms"@en;
+  skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminology/aspect/> .
+
+aspect:WindTurbineTerms a skos:Concept;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindPowerPlantTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbines."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:WindTurbineNacelleTerms, aspect:WindTurbineRotorTerms, aspect:WindTurbineTowerTerms;
+  skos:prefLabel "Wind Turbine Terms"@en .
+
+aspect:WindTurbineNacelleTerms a skos:Concept;
+  skos:broader aspect:WindTurbineTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbine nacelles."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:GeneratorTerms, aspect:gearbox_displacement, aspect:generator_speed,
+    aspect:main_shaft_bending, aspect:main_shaft_bending_moment, aspect:main_shaft_tilt_moment,
+    aspect:main_shaft_torque, aspect:main_shaft_yaw_moment, aspect:yaw_angle;
+  skos:prefLabel "Wind Turbine Nacelle Terms"@en .
+
+aspect:yaw_angle a skos:Concept;
+  aspect:abbrevation "yaw"@en;
+  aspect:iec-61400-25-2-name "YwAng"@en;
+  aspect:long-name "Yaw Angle"@en;
+  aspect:prefUnit "def"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:definition "An angle of a wind turbine yaw bearing relative to the nominal true North"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "yaw_angle"@en .
+
+aspect:main_shaft_bending_moment a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Main Shaft Bending Moment"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:definition "A main shaft bending moment is the reaction induced in a wind turbine main shaft when an external force or moment is applied to the shaft, causing the shaft to bend."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "main_shaft_bending_moment"@en .
+
+aspect:main_shaft_bending a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Main Shaft Bending"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "main_shaft_bending"@en .
+
+aspect:main_shaft_torque a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Main Shaft Torque"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "main_shaft_torque"@en .
+
+aspect:main_shaft_tilt_moment a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Main Shaft Tilt Moment"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "main_shaft_tilt_moment"@en .
+
+aspect:main_shaft_yaw_moment a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Main Shaft Yaw Moment"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "main_shaft_yaw_moment"@en .
+
+aspect:generator_speed a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Generator Speed"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:definition "A rotational speed of the wind turbine generator."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "generator_speed"@en .
+
+aspect:gearbox_displacement a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Gearbox Displacement"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:definition "A load indeced displacement of gearbox resulting of gearbox–generator misalignment."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "gearbox_displacement"@en .
+
+aspect:GeneratorTerms a skos:Concept;
+  skos:broader aspect:WindTurbineNacelleTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbine generators."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:active_power, aspect:apparent_power, aspect:reactive_power;
+  skos:prefLabel "Generator Terms"@en .
+
+aspect:active_power a skos:Concept;
+  aspect:long-name "Active Power"@en;
+  skos:broader aspect:GeneratorTerms;
+  skos:definition "Active Power is the actual power which is really transferred from the wind turbine generator to the load such as transformer."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "active_power"@en .
+
+aspect:reactive_power a skos:Concept;
+  aspect:long-name "Reactive Power"@en;
+  skos:broader aspect:GeneratorTerms;
+  skos:definition "The powers that continuously bounce back and forth between the wind turbine generator and load."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "reactive_power"@en .
+
+aspect:apparent_power a skos:Concept;
+  aspect:long-name "Apparent Power"@en;
+  skos:broader aspect:GeneratorTerms;
+  skos:definition "The combination of reactive power and true power is called apparent power, and it is the product of a circuit’s voltage and current, without reference to phase angle."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "apparent_power"@en .
+
+aspect:WindTurbineTowerTerms a skos:Concept;
+  skos:broader aspect:WindTurbineTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbine towers."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:tower_bending, aspect:tower_bending_moment, aspect:tower_torsion;
+  skos:prefLabel "Wind Turbine Tower Terms"@en .
+
+aspect:tower_bending_moment a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Tower Bending Moment"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineTowerTerms;
+  skos:definition "A tower bending moment is the reaction induced in a wind turbine tower when an external force or moment is applied to the tower, causing the tower to bend."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "tower_bending_moment"@en .
+
+aspect:tower_torsion a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Tower Torsion"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineTowerTerms;
+  skos:definition "A tower torsion is the twisting of the wind turbine tower due to an applied torque to it."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "tower_torsion"@en .
+
+aspect:tower_bending a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Tower Bending"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineTowerTerms;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "tower_bending"@en .
+
+aspect:WindTurbineRotorTerms a skos:Concept;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbine rotors."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:WindTurbineBladeTerms, aspect:rotor_speed, aspect:rotor_status;
+  skos:prefLabel "Wind Turbine Rotor Terms"@en .
+
+aspect:rotor_status a skos:Concept;
+  aspect:iec-61400-25-2-name "RotSt"@en;
+  aspect:long-name "Rotor Status"@en;
+  aspect:prefUnit "def"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineRotorTerms;
+  skos:definition "Status of wind turbine rotor. Typically rotor is either idling (no wind scenario), being stopped or blocked, or it is rotating. Accordingly, rotor status signal takes one of those four values."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rotor_status"@en .
+
+aspect:rotor_speed a skos:Concept;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Rotor Speed"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineRotorTerms;
+  skos:definition "A rotational speed of the wind turbine rotor."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "rotor_speed"@en .
+
+aspect:WindTurbineBladeTerms a skos:Concept;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineRotorTerms;
+  skos:definition "This is a category of variables, parameters, and constants associated with wind turbine blades."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:narrower aspect:R_ratio, aspect:SN_curve_slope, aspect:Young_modulus, aspect:allowed_number_cycles,
+    aspect:amplitude_characteristic_value_material_property_strain, aspect:amplitude_characteristic_value_material_property_stress,
+    aspect:amplitude_load, aspect:angle_of_attack, aspect:annual_failure_probability,
+    aspect:axial_force, aspect:bending_stiffness, aspect:blade_torsion_moment, aspect:characteristic_load,
+    aspect:characteristic_value_material_property_compression_strain, aspect:characteristic_value_material_property_compression_stress,
+    aspect:characteristic_value_material_property_strain, aspect:characteristic_value_material_property_stress,
+    aspect:characteristic_value_material_property_tension_strain, aspect:characteristic_value_material_property_tension_stress,
+    aspect:damping_ratio, aspect:design_load, aspect:design_load_fatigue, aspect:design_load_static,
+    aspect:design_value_material_property_strain, aspect:design_value_material_property_stress,
+    aspect:dynamic_strength_one_cycle, aspect:edgewise_bending_moment, aspect:edgewise_shear_force,
+    aspect:equivalent_damage, aspect:fatigue_strain_factor_target_load, aspect:fatigue_strain_factor_test_load,
+    aspect:fatigue_target_test_load, aspect:fiber_density, aspect:flapwise_bending_moment,
+    aspect:flapwise_shear_force, aspect:flatwise_bending_moment, aspect:flatwise_shear_force,
+    aspect:leadlag_bending_moment, aspect:leadlag_shear_force, aspect:load_mean_calculated,
+    aspect:load_mean_test, aspect:load_range_calculated, aspect:load_range_test, aspect:mean_load,
+    aspect:number_cycles_bin, aspect:number_load_cycles, aspect:number_specimens, aspect:partial_accuracy_load_assumptions_factor,
+    aspect:partial_accuracy_load_assumptions_factor_a, aspect:partial_accuracy_load_assumptions_factor_b,
+    aspect:partial_accuray_analysis_method_factor, aspect:partial_base_factor, aspect:partial_blade_variation_factor_fatigue,
+    aspect:partial_blade_variation_factor_static, aspect:partial_consequence_failure_factor,
+    aspect:partial_consequence_failure_factor_fatigue, aspect:partial_consequence_failure_factor_static,
+    aspect:partial_environmental_factor_fatigue, aspect:partial_environmental_factor_static,
+    aspect:partial_error_fatigue_formulation_factor, aspect:partial_factor, aspect:partial_failure_mode_factor,
+    aspect:partial_fatigue_verification_factor, aspect:partial_irreversible_long_term_degradadion_factor,
+    aspect:partial_load_factor, aspect:partial_manufacturing_effects_factor, aspect:partial_material_property_factor,
+    aspect:partial_repair_factor, aspect:partial_short_term_verification_factor, aspect:partial_temperature_effects_factor,
+    aspect:partial_test_fatigue_load_factor, aspect:partial_test_static_load_factor, aspect:permissible_number_cycles_bin,
+    aspect:pitch_angle, aspect:ply_thickness, aspect:poisson_ratio, aspect:pressure_side,
+    aspect:reduced_dynamic_strength_one_cycle, aspect:reference_number_cycles, aspect:relative_effect_change_number_cycles,
+    aspect:relative_fatigue_strain_factor, aspect:relative_humidity, aspect:resulting_number_cycles,
+    aspect:shear_modulus, aspect:spanwise_force, aspect:standard_deviation, aspect:static_bending_test_load,
+    aspect:static_target_test_load, aspect:strain, aspect:stress, aspect:succion_side,
+    aspect:test_load_factor, aspect:torsion_moment, aspect:torsional_stiffness, aspect:trailing_edge,
+    aspect:variance;
+  skos:prefLabel "Wind Turbine Blade Terms"@en .
+
+aspect:pitch_angle a skos:Concept;
+  aspect:abbrevation "pitch"@en;
+  aspect:iec-61400-25-2-name "BlPthAngVal"@en;
+  aspect:long-name "Pitch Angle"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "An angle of a single wind turbine blade or all bladed comprising wind turbine rotor in a moving air. In IEC 61400-25-2 this correspongs to the parameter BlPthAngVal (Pitch angle for blade as feedback from the pitch system)."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "pitch_angle"@en .
+
+aspect:angle_of_attack a skos:Concept;
+  aspect:abbrevation "AOA"@en;
+  aspect:altfUnit "rad"@en;
+  aspect:long-name "Angle Of Attack"@en;
+  aspect:prefUnit "deg"@en;
+  dct:creator <https://orcid.org/0000-0002-9381-9693>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "The angle at which the blade is adjusted to the incoming wind."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "angle_of_attack"@en .
+
+aspect:Young_modulus a skos:Concept;
+  aspect:altfUnit "kN mm-2, ksi"@en;
+  aspect:dnvgl-st-0376-name "E"@en;
+  aspect:long-name "Young Modulus"@en;
+  aspect:prefUnit "GPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "Y"@en, "modulus_of_elasticity"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Young’s modulus"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "Young_modulus"@en .
+
+aspect:bending_stiffness a skos:Concept;
+  aspect:altfUnit "lbf ft2"@en;
+  aspect:long-name "Bending Stiffness"@en;
+  aspect:prefUnit "N m2"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "EI"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Bending stiffness (modulus multiplied by moment of inertia)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "bending_stiffness"@en .
+
+aspect:design_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "Fd"@en;
+  aspect:long-name "Design Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Design load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "design_load"@en .
+
+aspect:characteristic_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "Fk"@en;
+  aspect:long-name "Characteristic Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Characteristic load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_load"@en .
+
+aspect:static_bending_test_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "Ftest"@en;
+  aspect:long-name "Static Bending Test Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Full scale blade static bending test load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "static_bending_test_load"@en .
+
+aspect:design_load_static a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Fdu"@en;
+  aspect:long-name "Design Load Static"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Static design load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "design_load_static"@en .
+
+aspect:design_load_fatigue a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "Fequivalent"@en;
+  aspect:iec-61400-23-name "Fdf"@en;
+  aspect:long-name "Design Load Fatigue"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "equivalent_design_load"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Equivalent load whose associated fatigue damage is equal to the fatigue damage calculated from the design load spectrum; the equivalent load is dependent on the number of test load cycles."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "design_load_fatigue"@en .
+
+aspect:shear_modulus a skos:Concept;
+  aspect:altfUnit "kN mm-2, ksi"@en;
+  aspect:dnvgl-st-0376-name "G"@en;
+  aspect:long-name "Shear Modulus"@en;
+  aspect:prefUnit "GPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "S"@en, "modulus_of_rigidity"@en, "mu"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Shear modulus"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "shear_modulus"@en .
+
+aspect:torsional_stiffness a skos:Concept;
+  aspect:long-name "Torsional Stiffness"@en;
+  aspect:prefUnit "N m2 rad-1"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "GJ"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Torsional stiffness (modulus multiplied by moment of inertia)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "torsional_stiffness"@en .
+
+aspect:SN_curve_slope a skos:Concept;
+  aspect:long-name "Sn Curve Slope"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "m"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Slope parameter of an SN curve"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "SN_curve_slope"@en .
+
+aspect:number_specimens a skos:Concept;
+  aspect:dnvgl-st-0376-name "n"@en;
+  aspect:long-name "Number Specimens"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Number of specimen test results in the sample"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "number_specimens"@en .
+
+aspect:number_load_cycles a skos:Concept;
+  aspect:dnvgl-st-0376-name "N"@en;
+  aspect:long-name "Number Load Cycles"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "cycle"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Number of load cycles"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "number_load_cycles"@en .
+
+aspect:annual_failure_probability a skos:Concept;
+  aspect:dnvgl-st-0376-name "Pf"@en;
+  aspect:long-name "Annual Failure Probability"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Annual failure probability"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "annual_failure_probability"@en .
+
+aspect:pressure_side a skos:Concept;
+  aspect:dnvgl-st-0376-name "PS"@en;
+  aspect:long-name "Pressure Side"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Pressure side of the airfoil"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "pressure_side"@en .
+
+aspect:succion_side a skos:Concept;
+  aspect:dnvgl-st-0376-name "SS"@en;
+  aspect:long-name "Succion Side"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Succion side of the airfoil"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "succion_side"@en .
+
+aspect:R_ratio a skos:Concept;
+  aspect:long-name "R Ratio"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "R"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "In fatigue loading: ratio between minimum and maximum stress (or strain, or load)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "R_ratio"@en .
+
+aspect:design_value_material_property_strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "Rd"@en;
+  aspect:long-name "Design Value Material Property Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Strain related design value for a material property (not yet reduced by any g)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "design_value_material_property_strain"@en .
+
+aspect:characteristic_value_material_property_strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "Rk"@en;
+  aspect:long-name "Characteristic Value Material Property Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Strain related characteristic value of a material property"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_strain"@en .
+
+aspect:amplitude_characteristic_value_material_property_strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "RkA"@en;
+  aspect:long-name "Amplitude Characteristic Value Material Property Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Strain related amplitude of characteristic structural member resistance for N = 1"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "amplitude_characteristic_value_material_property_strain"@en .
+
+aspect:characteristic_value_material_property_tension_strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "Rkt"@en;
+  aspect:long-name "Characteristic Value Material Property Tension Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Strain related characteristic short term structural member resistance in tension"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_tension_strain"@en .
+
+aspect:characteristic_value_material_property_compression_strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "Rkc"@en;
+  aspect:long-name "Characteristic Value Material Property Compression Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Strain related characteristic short term structural member resistance in compression"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_compression_strain"@en .
+
+aspect:design_value_material_property_stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "Rd"@en;
+  aspect:long-name "Design Value Material Property Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Stress related design value for a material property (not yet reduced by any g)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "design_value_material_property_stress"@en .
+
+aspect:characteristic_value_material_property_stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "Rk"@en;
+  aspect:long-name "Characteristic Value Material Property Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Stress related characteristic value of a material property"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_stress"@en .
+
+aspect:amplitude_characteristic_value_material_property_stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "RkA"@en;
+  aspect:long-name "Amplitude Characteristic Value Material Property Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Stress related amplitude of characteristic structural member resistance for N = 1"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "amplitude_characteristic_value_material_property_stress"@en .
+
+aspect:characteristic_value_material_property_tension_stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "Rkt"@en;
+  aspect:long-name "Characteristic Value Material Property Tension Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Stress related characteristic short term structural member resistance in tension"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_tension_stress"@en .
+
+aspect:characteristic_value_material_property_compression_stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "Rkc"@en;
+  aspect:long-name "Characteristic Value Material Property Compression Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Stress related characteristic short term structural member resistance in compression"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "characteristic_value_material_property_compression_stress"@en .
+
+aspect:standard_deviation a skos:Concept;
+  aspect:dnvgl-st-0376-name "s"@en;
+  aspect:long-name "Standard Deviation"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "sigma"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Sample standard deviation"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "standard_deviation"@en .
+
+aspect:variance a skos:Concept;
+  aspect:dnvgl-st-0376-name "S2"@en;
+  aspect:long-name "Variance"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "sigma2"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Sample variance"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "variance"@en .
+
+aspect:strain a skos:Concept;
+  aspect:altfUnit "mm mm-1, in in-1"@en;
+  aspect:dnvgl-st-0376-name "structural_response_strain, Sd"@en;
+  aspect:iec-61400-23-name "sigma"@en;
+  aspect:long-name "Strain"@en;
+  aspect:prefUnit "mepsilon"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "S"@en, "deformation"@en, "epsilon"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. For wind turbine blades, structural response to the design load."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "strain"@en .
+
+aspect:stress a skos:Concept;
+  aspect:altfUnit "Pa, psi"@en;
+  aspect:dnvgl-st-0376-name "structural_response_stress, Sd"@en;
+  aspect:long-name "Stress"@en;
+  aspect:prefUnit "MPa"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "S"@en, "sigma"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Internal forces that neighbouring particles of a continuous material exert on each other. For wind turbine blades, structural response to the design load."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "stress"@en .
+
+aspect:mean_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "SkM"@en;
+  aspect:long-name "Mean Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Mean value of the load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "mean_load"@en .
+
+aspect:amplitude_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:dnvgl-st-0376-name "SkA"@en;
+  aspect:long-name "Amplitude Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Amplitude of the load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "amplitude_load"@en .
+
+aspect:ply_thickness a skos:Concept;
+  aspect:altfUnit "in"@en;
+  aspect:dnvgl-st-0376-name "tply"@en;
+  aspect:long-name "Ply Thickness"@en;
+  aspect:prefUnit "mm"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Ply thickness"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "ply_thickness"@en .
+
+aspect:trailing_edge a skos:Concept;
+  aspect:long-name "Trailing Edge"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "TE"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Trailing edge"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "trailing_edge"@en .
+
+aspect:partial_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma, reduction_enhancement_factor"@en;
+  aspect:iec-61400-23-name "test_load_factor"@en;
+  aspect:long-name "Partial Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction or enhancement factor"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_factor"@en .
+
+aspect:partial_error_fatigue_formulation_factor a skos:Concept;
+  aspect:long-name "Partial Error Fatigue Formulation Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "gamma_ef"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factor compensating for possible errors in the fatigue formulation for full scale blade fatigue bending testing"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_error_fatigue_formulation_factor"@en .
+
+aspect:partial_load_factor a skos:Concept;
+  aspect:long-name "Partial Load Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "gamma_f"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial load factor"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_load_factor"@en .
+
+aspect:partial_material_property_factor a skos:Concept;
+  aspect:long-name "Partial Material Property Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "gamma_m"@en, "partial_material_factor"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial_reduction factor for material properties"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_material_property_factor"@en .
+
+aspect:partial_base_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_0"@en;
+  aspect:long-name "Partial Base Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "base_factor"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial base factor"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_base_factor"@en .
+
+aspect:partial_failure_mode_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_mc"@en;
+  aspect:long-name "Partial Failure Mode Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for criticality of failure mode"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_failure_mode_factor"@en .
+
+aspect:partial_irreversible_long_term_degradadion_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m1"@en;
+  aspect:long-name "Partial Irreversible Long Term Degradadion Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for irreversible long-term degradation"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_irreversible_long_term_degradadion_factor"@en .
+
+aspect:partial_temperature_effects_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m2"@en;
+  aspect:long-name "Partial Temperature Effects Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for temperature effects (reversible effects)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_temperature_effects_factor"@en .
+
+aspect:partial_manufacturing_effects_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m3"@en;
+  aspect:long-name "Partial Manufacturing Effects Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for manufacturing effects"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_manufacturing_effects_factor"@en .
+
+aspect:partial_accuray_analysis_method_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m4"@en;
+  aspect:long-name "Partial Accuray Analysis Method Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for the accuracy of analysis methods"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_accuray_analysis_method_factor"@en .
+
+aspect:partial_accuracy_load_assumptions_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m5"@en;
+  aspect:long-name "Partial Accuracy Load Assumptions Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for the accuracy of load assumptions"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_accuracy_load_assumptions_factor"@en .
+
+aspect:partial_accuracy_load_assumptions_factor_a a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_m5a"@en;
+  aspect:long-name "Partial Accuracy Load Assumptions Factor A"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for the accuracy of load assumptions related to applied load type"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_accuracy_load_assumptions_factor_a"@en .
+
+aspect:partial_accuracy_load_assumptions_factor_b a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_5b"@en;
+  aspect:long-name "Partial Accuracy Load Assumptions Factor B"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor for the accuracy of load assumptions related to direction of applied load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_accuracy_load_assumptions_factor_b"@en .
+
+aspect:partial_short_term_verification_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_shortterm"@en;
+  aspect:long-name "Partial Short Term Verification Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor gm for short term verification"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_short_term_verification_factor"@en .
+
+aspect:partial_fatigue_verification_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_mfatigue"@en;
+  aspect:long-name "Partial Fatigue Verification Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factor gm for fatigue verification"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_fatigue_verification_factor"@en .
+
+aspect:partial_test_fatigue_load_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_nf"@en;
+  aspect:long-name "Partial Test Fatigue Load Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "gsf"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial test load enhancement factor for full scale blade fatigue bending testing"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_test_fatigue_load_factor"@en .
+
+aspect:partial_repair_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_process, gamma_env"@en;
+  aspect:long-name "Partial Repair Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial reduction factors for repair"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_repair_factor"@en .
+
+aspect:partial_blade_variation_factor_fatigue a skos:Concept;
+  aspect:long-name "Partial Blade Variation Factor Fatigue"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "gamma_sf"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial blade-to-blade variation factor for full scale fatigue bending blade testing"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_blade_variation_factor_fatigue"@en .
+
+aspect:partial_blade_variation_factor_static a skos:Concept;
+  aspect:iec-61400-23-name "gamma_su"@en;
+  aspect:long-name "Partial Blade Variation Factor Static"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial blade-to-blade variation factor for full scale static bending blade testing"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_blade_variation_factor_static"@en .
+
+aspect:partial_test_static_load_factor a skos:Concept;
+  aspect:dnvgl-st-0376-name "gamma_1t, gamma_2t"@en;
+  aspect:long-name "Partial Test Static Load Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial test load enhancement factors for full scale blade static bending test loads"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_test_static_load_factor"@en .
+
+aspect:poisson_ratio a skos:Concept;
+  aspect:dnvgl-st-0376-name "nu"@en;
+  aspect:long-name "Poisson Ratio"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "mu"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Poisson's ratio"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "poisson_ratio"@en .
+
+aspect:fiber_density a skos:Concept;
+  aspect:dnvgl-st-0376-name "rho_f"@en;
+  aspect:long-name "Fiber Density"@en;
+  aspect:prefUnit "g cm-3"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Fiber density"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "fiber_density"@en .
+
+aspect:damping_ratio a skos:Concept;
+  aspect:dnvgl-st-0376-name "zeta"@en;
+  aspect:long-name "Damping Ratio"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "damping_coefficient"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Damping ratio (damping coefficient)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "damping_ratio"@en .
+
+aspect:number_cycles_bin a skos:Concept;
+  aspect:dnvgl-st-0376-name "ni"@en;
+  aspect:long-name "Number Cycles Bin"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Number of load cycles in fatigue load bin i"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "number_cycles_bin"@en .
+
+aspect:permissible_number_cycles_bin a skos:Concept;
+  aspect:dnvgl-st-0376-name "Ni"@en;
+  aspect:long-name "Permissible Number Cycles Bin"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Permissible number of cycles for the load amplitude SkA and mean SkM in bin i."@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "permissible_number_cycles_bin"@en .
+
+aspect:equivalent_damage a skos:Concept;
+  aspect:dnvgl-st-0376-name "total_damage"@en;
+  aspect:iec-61400-23-name "theoretical_damage"@en;
+  aspect:long-name "Equivalent Damage"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "D"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Equivalent damage (theoretical damage)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "equivalent_damage"@en .
+
+aspect:flatwise_shear_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fa"@en;
+  aspect:long-name "Flatwise Shear Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Flatwise shear force (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "flatwise_shear_force"@en .
+
+aspect:edgewise_shear_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fb"@en;
+  aspect:long-name "Edgewise Shear Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Edgewise shear force (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "edgewise_shear_force"@en .
+
+aspect:axial_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fc"@en;
+  aspect:long-name "Axial Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "spanwise_force"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Axial (tensile) force (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "axial_force"@en .
+
+aspect:flapwise_shear_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fx"@en;
+  aspect:long-name "Flapwise Shear Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Flapwise shear force (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "flapwise_shear_force"@en .
+
+aspect:leadlag_shear_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fy"@en;
+  aspect:long-name "Leadlag Shear Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Lead-lag shear force (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "leadlag_shear_force"@en .
+
+aspect:spanwise_force a skos:Concept;
+  aspect:altfUnit "lbf"@en;
+  aspect:iec-61400-23-name "Fz"@en;
+  aspect:long-name "Spanwise Force"@en;
+  aspect:prefUnit "N"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Spanwise (tensile) force (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "spanwise_force"@en .
+
+aspect:edgewise_bending_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Ma"@en;
+  aspect:long-name "Edgewise Bending Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Edgewise bending moment (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "edgewise_bending_moment"@en .
+
+aspect:flatwise_bending_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Mb"@en;
+  aspect:long-name "Flatwise Bending Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Flatwise bending moment (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "flatwise_bending_moment"@en .
+
+aspect:torsion_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Mc"@en;
+  aspect:long-name "Torsion Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:altLabel "blade_torsion_moment"@en;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Blade torsion moment (chordwise coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "torsion_moment"@en .
+
+aspect:leadlag_bending_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-13-name "Mbe"@en;
+  aspect:iec-61400-23-name "Mx"@en;
+  aspect:long-name "Leadlag Bending Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Lead-lag bending moment (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "leadlag_bending_moment"@en .
+
+aspect:flapwise_bending_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-13-name "Mbf"@en;
+  aspect:iec-61400-23-name "My"@en;
+  aspect:long-name "Flapwise Bending Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Flapwise bending moment (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "flapwise_bending_moment"@en .
+
+aspect:blade_torsion_moment a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Mz"@en;
+  aspect:long-name "Blade Torsion Moment"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Blade torsion moment (rotor coordinate system)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "blade_torsion_moment"@en .
+
+aspect:partial_consequence_failure_factor a skos:Concept;
+  aspect:iec-61400-23-name "gamma_n"@en;
+  aspect:long-name "Partial Consequence Failure Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factors for consequences of failure"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_consequence_failure_factor"@en .
+
+aspect:partial_consequence_failure_factor_static a skos:Concept;
+  aspect:iec-61400-23-name "gamma_nu"@en;
+  aspect:long-name "Partial Consequence Failure Factor Static"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factors for consequences of failure due to static load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_consequence_failure_factor_static"@en .
+
+aspect:partial_consequence_failure_factor_fatigue a skos:Concept;
+  aspect:iec-61400-23-name "gamma_nf"@en;
+  aspect:long-name "Partial Consequence Failure Factor Fatigue"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factors for consequences of failure due to fatigue load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_consequence_failure_factor_fatigue"@en .
+
+aspect:static_target_test_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Ftargetu"@en;
+  aspect:long-name "Static Target Test Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Target load for static test"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "static_target_test_load"@en .
+
+aspect:fatigue_target_test_load a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Ftargetf"@en;
+  aspect:long-name "Fatigue Target Test Load"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Target load for fatigue test"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "fatigue_target_test_load"@en .
+
+aspect:partial_environmental_factor_static a skos:Concept;
+  aspect:iec-61400-23-name "gamma_lu"@en;
+  aspect:long-name "Partial Environmental Factor Static"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factors for environmental effects during static tests"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_environmental_factor_static"@en .
+
+aspect:partial_environmental_factor_fatigue a skos:Concept;
+  aspect:iec-61400-23-name "gamma_lf"@en;
+  aspect:long-name "Partial Environmental Factor Fatigue"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Partial factors for environmental effects during fatigue tests"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "partial_environmental_factor_fatigue"@en .
+
+aspect:relative_fatigue_strain_factor a skos:Concept;
+  aspect:iec-61400-23-name "rFSF"@en;
+  aspect:long-name "Relative Fatigue Strain Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Relative Fatigue Strain Factor"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "relative_fatigue_strain_factor"@en .
+
+aspect:fatigue_strain_factor_target_load a skos:Concept;
+  aspect:iec-61400-23-name "FSFtarget"@en;
+  aspect:long-name "Fatigue Strain Factor Target Load"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Fatigue Strain Factor Target Load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "fatigue_strain_factor_target_load"@en .
+
+aspect:fatigue_strain_factor_test_load a skos:Concept;
+  aspect:iec-61400-23-name "FSFtest"@en;
+  aspect:long-name "Fatigue Strain Factor Test Load"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Fatigue Strain Factor Test Load"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "fatigue_strain_factor_test_load"@en .
+
+aspect:reduced_dynamic_strength_one_cycle a skos:Concept;
+  aspect:iec-61400-23-name "Dr"@en;
+  aspect:long-name "Reduced Dynamic Strength One Cycle"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Reduced dynamic strength valid for one load cycle"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "reduced_dynamic_strength_one_cycle"@en .
+
+aspect:dynamic_strength_one_cycle a skos:Concept;
+  aspect:iec-61400-23-name "D"@en;
+  aspect:long-name "Dynamic Strength One Cycle"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Dynamic strength valid for one load cycle"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "dynamic_strength_one_cycle"@en .
+
+aspect:allowed_number_cycles a skos:Concept;
+  aspect:iec-61400-23-name "N"@en;
+  aspect:long-name "Allowed Number Cycles"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Allowed number of load cycles"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "allowed_number_cycles"@en .
+
+aspect:load_range_test a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Wt, load_width_test"@en;
+  aspect:long-name "Load Range Test"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Load range within a cycle loading block during the test"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "load_range_test"@en .
+
+aspect:load_mean_test a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "Mt"@en;
+  aspect:long-name "Load Mean Test"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Load mean within a cycle loading block during the test"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "load_mean_test"@en .
+
+aspect:load_range_calculated a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "W0, load_width_calculated"@en;
+  aspect:long-name "Load Range Calculated"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Calculated load range within a cycle loading block"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "load_range_calculated"@en .
+
+aspect:load_mean_calculated a skos:Concept;
+  aspect:altfUnit "lbf ft"@en;
+  aspect:iec-61400-23-name "M0"@en;
+  aspect:long-name "Load Mean Calculated"@en;
+  aspect:prefUnit "N m"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Calculated load mean within a cycle loading block"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "load_mean_calculated"@en .
+
+aspect:test_load_factor a skos:Concept;
+  aspect:iec-61400-23-name "gamma_test"@en;
+  aspect:long-name "Test Load Factor"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Test load factor"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "test_load_factor"@en .
+
+aspect:relative_effect_change_number_cycles a skos:Concept;
+  aspect:iec-61400-23-name "R"@en;
+  aspect:long-name "Relative Effect Change Number Cycles"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Relative effect of changing from one number of load cycles (nt1) to another (nt2)"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "relative_effect_change_number_cycles"@en .
+
+aspect:reference_number_cycles a skos:Concept;
+  aspect:dnvgl-st-0376-name "Nref"@en;
+  aspect:iec-61400-23-name "nt1"@en;
+  aspect:long-name "Reference Number Cycles"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Reference number of cycles for damage-equivalent load determination"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "reference_number_cycles"@en .
+
+aspect:resulting_number_cycles a skos:Concept;
+  aspect:iec-61400-23-name "nt2"@en;
+  aspect:long-name "Resulting Number Cycles"@en;
+  dct:creator <https://orcid.org/0000-0002-4573-1232>;
+  skos:broader aspect:WindTurbineBladeTerms;
+  skos:definition "Second (resulting) number of load cycles"@en;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
+  skos:prefLabel "resulting_number_cycles"@en .
