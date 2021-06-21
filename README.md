@@ -28,3 +28,14 @@ Some of OntoStack micro-services are:
 **ASPECT** is served by DTU Wind Energy instance of `OntoStack`:
 https://data.windenergy.dtu.dk/ontologies/view
 
+
+# Taxonomy implementation
+The taxonomy is implemented in following services:
+- [NEWA Microscale Atlas data access point](https://wps.neweuropeanwindatlas.eu/api/microscale-atlas/v1/docs)
+- [NEWA Mesoscale Atlas data access point](https://wps.neweuropeanwindatlas.eu/api/mesoscale-atlas/v1/docs)
+- [CEDAR](http://cedar.metadatacenter.org/) through integration with [BioPortal](https://bioportal.bioontology.org/ontologies/WETAXTOPICS/)
+
+*NEWA: [New European Wind Atlas](https://www.neweuropeanwindatlas.eu/)*
+# Contribute
+
+The taxonomy is intended to be used and further developed by the community. Therefore, we welcome collaborators willing to take part in the further development of the taxonomy. If you are one of them either request to become one of the taxonomy admins and/or post GitHub issues on what we can improve in the current taxonomy.
