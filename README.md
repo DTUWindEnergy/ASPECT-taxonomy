@@ -5,7 +5,8 @@ This repository is meant for maintaining and updating the taxonomy (i.e. control
 
 We use `sheet2rdf` and `OntoStack` to build and serve `ASPECT` taxonomy.
 We use `purl.org` to provide persistant URLs for `ASPECT` terms and properties:
-- [purl.org/aspect](purl.org/aspect), e.g. [purl.org/aspect/wind_speed](purl.org/aspect/wind_speed)
+- entire taxonomy [purl.org/aspect](purl.org/aspect)
+- or individual term such as `wind_speed` [purl.org/aspect/wind_speed](purl.org/aspect/wind_speed)
 
 # sheet2rdf
 
