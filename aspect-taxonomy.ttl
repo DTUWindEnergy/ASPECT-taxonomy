@@ -25,8 +25,8 @@
   dct:title "ASPECT: wind energy vAriableS ParametErs and ConsTants"@en;
   pav:createdOn "2020-10-22T22:00:00+01:00"@en;
   pav:lastUpdatedOn "2021-06-21T15:00:00+01:00"@en;
-  pav:version "0.1"@en;
-  skos:hasTopConcept aspect:AtmosphericTerms, aspect:GenericTerms, aspect:WindPowerPlantTerms;
+  pav:version "0.1.0"@en;
+  skos:hasTopConcept aspect:EnviromentalCoditionTerms, aspect:GenericTerms, aspect:WindPowerPlantTerms;
   skos:prefLabel "ASPECT"@en .
 
 aspect:longName a rdf:Property;
@@ -117,16 +117,16 @@ aspect:elevation_angle a skos:Concept;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "elevation_angle"@en .
 
-aspect:AtmosphericTerms a skos:Concept;
+aspect:EnviromentalCoditionTerms a skos:Concept;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:definition "This is a category of variables, parameters, and constants associated with atmopshere."@en;
+  skos:definition "This is a category of variables, parameters, and constants associated with enviromental coditions in which a wind power plant operates."@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:narrower aspect:air_pressure, aspect:air_temperature, aspect:crosswind, aspect:equivalent_reflectivity_factor,
     aspect:flow_inclination_angle, aspect:headwind, aspect:number_of_particles_classified,
     aspect:particle_diameter, aspect:particle_fall_speed, aspect:radial_velocity_of_scatterers_toward_instrument,
     aspect:rain_status, aspect:rainfall_amount, aspect:rainfall_kinetic_energy, aspect:rainfall_rate,
     aspect:relative_humidity, aspect:tailwind, aspect:wind_direction, aspect:wind_speed;
-  skos:prefLabel "Atmospheric Terms"@en;
+  skos:prefLabel "Enviromental Codition Terms"@en;
   skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminology/aspect/> .
 
 aspect:wind_speed a skos:Concept;
@@ -135,7 +135,7 @@ aspect:wind_speed a skos:Concept;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
   skos:altLabel "Vh"@en, "horizontal_wind_speed"@en;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_speed>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -148,7 +148,7 @@ aspect:wind_direction a skos:Concept;
   aspect:prefUnit "deg"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
   skos:altLabel "wind_from_direction"@en;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) In meteorological reports, the direction of the wind vector is usually (but not always) given as the direction from which it is blowing (wind_from_direction) (westerly, northerly, etc.). In other contexts, such as atmospheric modelling, it is often natural to give the direction in the usual manner of vectors as the heading or the direction to which it is blowing (wind_to_direction) (eastward, southward, etc.) \"from_direction\" is used in the construction X_from_direction and indicates the direction from which the velocity vector of X is coming."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/wind_from_direction>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -158,7 +158,7 @@ aspect:crosswind a skos:Concept;
   aspect:long-name "Crosswind"@en;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "A crosswind is any wind that has a perpendicular component to the line or direction of travel. In case of a wind turbine it is represents a component of the wind perpendicular to the rotor saspectt area."@en;
   skos:exactMatch <https://en.wikipedia.org/wiki/Crosswind>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -168,7 +168,7 @@ aspect:headwind a skos:Concept;
   aspect:long-name "Headwind"@en;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "A headwind is any wind that blows against the direction of travel. In case of a wind turbine it is represents a component of the wind which directly blows against the rotor saspectt area."@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "headwind"@en .
@@ -177,7 +177,7 @@ aspect:tailwind a skos:Concept;
   aspect:long-name "Tailwind"@en;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "A tailwind is any wind that blows in the direction of travel."@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "tailwind"@en .
@@ -188,7 +188,7 @@ aspect:radial_velocity_of_scatterers_toward_instrument a skos:Concept;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
   skos:altLabel "radial_velocity"@en;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "A velocity is a vector quantity. \"Radial velocity toward instrument\" means the component of the velocity along the line of sight of the instrument where positive implies movement toward the instrument (i.e. inward). The \"instrument\" (examples are radar and lidar) is the device used to make the observation. The \"scatterers\" are what causes the transmitted signal to be returned to the instrument (examples are aerosols, hydrometeors and refractive index irregularities), of whatever kind the instrument detects. A standard name referring to radial velocity \"away_from_instrument\" should be used for a data variable having the opposite sign convention."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/radial_velocity_of_scatterers_toward_instrument>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -200,7 +200,7 @@ aspect:air_temperature a skos:Concept;
   aspect:long-name "Air Temperature"@en;
   aspect:prefUnit "C"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Air temperature is the bulk temperature of the air, not the surface (skin) temperature."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/air_temperature>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -210,7 +210,7 @@ aspect:air_pressure a skos:Concept;
   aspect:long-name "Air Pressure"@en;
   aspect:prefUnit "Pa"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Air pressure is the force per unit area which would be exerted when the moving gas molecules of which the air is composed strike a theoretical surface of any orientation."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/air_pressure>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -222,7 +222,7 @@ aspect:relative_humidity a skos:Concept;
   aspect:long-name "Relative Humidity"@en;
   aspect:prefUnit "air g kg-1"@en, "deg"@en;
   dct:creator <https://orcid.org/0000-0002-4573-1232>, <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms, aspect:WindTurbineBladeTerms;
+  skos:broader aspect:EnviromentalCoditionTerms, aspect:WindTurbineBladeTerms;
   skos:definition "Relative humidity"@en, "Relative humidity is a parameter used to describe the amount of water vapor that exists in a gaseous mixture of air and water."@en;
   skos:exactMatch <https://mmisw.org/ont/cf/parameter/relative_humidity>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -233,7 +233,7 @@ aspect:flow_inclination_angle a skos:Concept;
   aspect:long-name "Flow Inclination Angle"@en;
   aspect:prefUnit "deg"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Flow inclination describes the angle between the horizontal plane and the direction of wind hitting the turbine. Coming from below, e.g. up-hill it is considered to be a positive, from down-hill to be negative angle."@en;
   skos:exactMatch <https://www.romowind.com/en/flow-inclination>;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
@@ -244,7 +244,7 @@ aspect:rain_status a skos:Concept;
   aspect:long-name "Rain Status"@en;
   aspect:prefUnit "deg"@en;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "This parameter indicates if rain is falling (has value 1 or True) or not (has value 0 or False)"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "rain_status"@en .
@@ -253,7 +253,7 @@ aspect:rainfall_amount a skos:Concept;
   aspect:long-name "Rainfall Amount"@en;
   aspect:prefUnit "mm"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Amount' means mass per unit area"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "rainfall_amount"@en .
@@ -262,7 +262,7 @@ aspect:rainfall_rate a skos:Concept;
   aspect:long-name "Rainfall Rate"@en;
   aspect:prefUnit "mm h-1"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Amount of rain that would fall over a given interval of time if the rainfall rate were constant over that time period"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "rainfall_rate"@en .
@@ -271,7 +271,7 @@ aspect:equivalent_reflectivity_factor a skos:Concept;
   aspect:long-name "Radar Reflectivity"@en;
   aspect:prefUnit "dBz"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Radar reflectivity factor Z is equal to the sum of the sixth- powers of the diameters of the water drops in a unit volume of space"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "radar_reflectivity"@en .
@@ -280,7 +280,7 @@ aspect:rainfall_kinetic_energy a skos:Concept;
   aspect:long-name "Rainfall Kinetic Energy"@en;
   aspect:prefUnit "J m-2 h-1"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Energy provided by rain per area and time interval"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "rainfall_kinetic_energy"@en .
@@ -289,7 +289,7 @@ aspect:particle_fall_speed a skos:Concept;
   aspect:long-name "Particle Fall Speed"@en;
   aspect:prefUnit "m s-1"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Mid-values of fall speed classes for classifying a precipitation particle's fall speed measured by a disdrometer"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "particle_fall_speed"@en .
@@ -298,7 +298,7 @@ aspect:particle_diameter a skos:Concept;
   aspect:long-name "Particle Diameter"@en;
   aspect:prefUnit "mm"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Mid-values of diameter classes for classifying a precipitation particle's diameter measured by a disdrometer"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "particle_diameter"@en .
@@ -306,7 +306,7 @@ aspect:particle_diameter a skos:Concept;
 aspect:number_of_particles_classified a skos:Concept;
   aspect:long-name "Number of particles classified by fall speed, diameter and time"@en;
   dct:creator <https://orcid.org/0000-0003-1702-8002>;
-  skos:broader aspect:AtmosphericTerms;
+  skos:broader aspect:EnviromentalCoditionTerms;
   skos:definition "Number of particles measured by a disdrometer and classified by fall speed, diameter and time"@en;
   skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/aspect/>;
   skos:prefLabel "number_of_particles_classified"@en .
