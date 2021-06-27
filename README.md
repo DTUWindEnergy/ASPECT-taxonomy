@@ -8,7 +8,7 @@ We use `purl.org` to provide persistant URLs for `ASPECT` terms and properties:
 - the entire taxonomy [purl.org/aspect](http://purl.org/aspect)
 - or an individual term such as `wind_speed` [purl.org/aspect/wind_speed](http://purl.org/aspect/wind_speed)
 
-# sheet2rdf
+# [sheet2rdf](https://github.com/fair-data-collective/sheet2rdf)
 
 This repository hosts automatic workflow, executed by means of Github actions, and underlying shell and python scripts which:
 
