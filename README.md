@@ -3,7 +3,7 @@
 # [ASPECT: wind energy v**A**riable**S** **P**aramet**E**rs and **C**ons**T**ants](http://purl.org/aspect/)
 This repository is meant for maintaining and updating the taxonomy (i.e. controlled vocabulary) of v**A**riable**S** **P**aramet**E**rs **C**ons**T**ants (ASPECT) used in wind energy community. In general, controlled vocabularies such this one allow an accurate and controlled approach in describing assets such datasets.
 
-We use `sheet2rdf` and `OntoStack` to build and serve `ASPECT` taxonomy.
+We use `sheet2rdf` and `OntoStack`, developed by [FAIR Data Collective](http://fairdatacollective.org), to build and serve `ASPECT` taxonomy.
 We use `purl.org` to provide persistant URLs for `ASPECT` terms and properties:
 - the entire taxonomy [purl.org/aspect](http://purl.org/aspect)
 - or an individual term such as `wind_speed` [purl.org/aspect/wind_speed](http://purl.org/aspect/wind_speed)
