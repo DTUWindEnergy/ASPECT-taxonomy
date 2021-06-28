@@ -12,7 +12,7 @@ We use `purl.org` to provide persistant URLs for `ASPECT` terms and properties:
 
 This repository hosts automatic workflow, executed by means of Github actions, and underlying shell and python scripts which:
 
-- [Fetches Google Sheet](https://docs.google.com/spreadsheets/d/1IzJ9cCVmoU2tcZ-P4xr405LE36aqhleiL6rvibAsCEo/edit#gid=1472229997) from Google Drive, which contains definitions of concepts (i.e., variables, parameters and constants), and converts it to `xlsx` and `csv` and stores these files to this repository
+- [Fetches Google Sheet](https://docs.google.com/spreadsheets/d/1VmXSbL7wWrHNIRjLOzTXohMUq2UBRtf9HJInH64kajI/edit#gid=1472229997) from Google Drive, which contains definitions of concepts (i.e., variables, parameters and constants), and converts it to `xlsx` and `csv` and stores these files to this repository
 - Converts fetched sheet to machine-actionable and FAIR RDF vocabulary using [xls2rdf](https://github.com/sparna-git/xls2rdf)
 - Tests the resulting RDF vocabulary using [qSKOS](https://github.com/cmader/qSKOS/)
 - Commits conversion results and tests logs to this repository
