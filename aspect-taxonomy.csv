@@ -46,7 +46,7 @@ aspect:particle_fall_speed,particle_fall_speed,,,Mid-values of fall speed classe
 aspect:particle_diameter,particle_diameter,,,Mid-values of diameter classes for classifying a precipitation particle's diameter measured by a disdrometer,Particle Diameter,,,,,,,,mm,,,aspect:EnviromentalConditionTerms,https://orcid.org/0000-0003-1702-8002
 aspect:number_of_particles_classified,number_of_particles_classified,,,"Number of particles measured by a disdrometer and classified by fall speed, diameter and time","Number of particles classified by fall speed, diameter and time",,,,,,,,,,,aspect:EnviromentalConditionTerms,https://orcid.org/0000-0003-1702-8002
 aspect:friction_velocity,friction_velocity,,,"Number of particles measured by a disdrometer and classified by fall speed, diameter and time","Number of particles classified by fall speed, diameter and time",,,,,,,,,,,aspect:EnviromentalConditionTerms,https://orcid.org/0000-0002-9381-9693
-aspect:along_flow_wind_velocity,along_flow_wind_velocity
+aspect:along_flow_wind_velocity,along_flow_wind_velocity,,,,,,,,,,,,,,,aspect:EnviromentalConditionTerms
 aspect:
 aspect:
 aspect:

@@ -27,7 +27,7 @@
   pav:lastUpdatedOn "2021-06-21T15:00:00+01:00"@en;
   pav:version "0.1.0"@en;
   skos:hasTopConcept <http://purl.org/aspect/>, aspect:EnviromentalConditionTerms, aspect:GenericTerms,
-    aspect:WindPowerPlantTerms, aspect:along_flow_wind_velocity;
+    aspect:WindPowerPlantTerms;
   skos:inScheme <http://purl.org/aspect/>;
   skos:prefLabel "ASPECT"@en;
   skos:topConceptOf <http://purl.org/aspect/> .
@@ -124,9 +124,10 @@ aspect:EnviromentalConditionTerms a skos:Concept;
   dct:creator <https://orcid.org/0000-0002-9381-9693>;
   skos:definition "This is a category of variables, parameters, and constants associated with enviromental conditions in which a wind power plant operates."@en;
   skos:inScheme <http://purl.org/aspect/>;
-  skos:narrower aspect:air_pressure, aspect:air_temperature, aspect:crosswind, aspect:flow_inclination_angle,
-    aspect:friction_velocity, aspect:headwind, aspect:number_of_particles_classified,
-    aspect:particle_diameter, aspect:particle_fall_speed, aspect:radar_reflectivity, aspect:radial_velocity_of_scatterers_toward_instrument,
+  skos:narrower aspect:air_pressure, aspect:air_temperature, aspect:along_flow_wind_velocity,
+    aspect:crosswind, aspect:flow_inclination_angle, aspect:friction_velocity, aspect:headwind,
+    aspect:number_of_particles_classified, aspect:particle_diameter, aspect:particle_fall_speed,
+    aspect:radar_reflectivity, aspect:radial_velocity_of_scatterers_toward_instrument,
     aspect:rain_status, aspect:rainfall_amount, aspect:rainfall_kinetic_energy, aspect:rainfall_rate,
     aspect:relative_humidity, aspect:tailwind, aspect:wind_direction, aspect:wind_speed;
   skos:prefLabel "Enviromental Condition Terms"@en;
@@ -323,9 +324,9 @@ aspect:friction_velocity a skos:Concept;
   skos:prefLabel "friction_velocity"@en .
 
 aspect:along_flow_wind_velocity a skos:Concept;
+  skos:broader aspect:EnviromentalConditionTerms;
   skos:inScheme <http://purl.org/aspect/>;
-  skos:prefLabel "along_flow_wind_velocity"@en;
-  skos:topConceptOf <http://purl.org/aspect/> .
+  skos:prefLabel "along_flow_wind_velocity"@en .
 
 aspect:WindPowerPlantTerms a skos:Concept;
   skos:definition "This is a category of variables, parameters, and constants associated with wind power plants."@en;
